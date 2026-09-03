@@ -1,3 +1,5 @@
+import { createElement } from "react";
+
 const foodImgs = [
     {
         title: "Hamburger",
@@ -32,4 +34,13 @@ function FoodGallery(){
     );
 }
 
-export default FoodGallery;
+//create component with createElement
+function Testing(){
+    return createElement(
+        "data",
+        {className: "testData"},
+        "Content"
+    );
+}
+
+export {FoodGallery, Testing};
