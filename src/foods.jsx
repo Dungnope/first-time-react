@@ -24,23 +24,67 @@ function FoodGallery(){
 
     const listFoods = foodImgs.map(food => 
         <li key={food.id}>
-            <p>food.title</p>
+            <p>{food.title}</p>
             <img src={food.imgLink} alt={food.alt} />
         </li>
     )
 
     return (
-        <ul>{listFoods}</ul>
+        <div>
+            <ul>{listFoods}</ul>
+            <p>test</p>
+        </div>
     );
 }
 
 //create component with createElement
 function Testing(){
-    return createElement(
-        "data",
-        {className: "testData"},
-        "Content"
-    );
+    return (
+        <>
+        <div>
+          <h1>Test title</h1>
+          <svg>
+            <circle cx="25" cy="75" r="20" stroke="green" strokeWidth="2" />
+          </svg>
+          <form>
+            <input type="text"/>
+          </form>
+        </div>
+       
+        </>
+    )
 }
 
-export {FoodGallery, Testing};
+function TodoList() {
+  return (
+    <>
+        <h1>Hedy Lamarr's Todos</h1>
+        <img
+          src="https://react.dev/images/docs/scientists/yXOvdOSs.jpg"
+          alt="Hedy Lamarr"
+          className="photo"
+          
+        />
+        <ul>
+            <li>Invent new traffic lights</li>
+            <li>Rehearse a movie scene</li>
+            <li>Improve the spectrum technology</li>
+        </ul>
+    </>
+  )
+}
+
+function DoubleCurlies(){
+  return (
+    <ul style={{
+      backgroundColor: 'pink',
+      color: 'green'
+    }}>
+      <li>Improve the videophone</li>
+      <li>Prepare aeronautics lectures</li>
+      <li>Work on the alcohol-fuelled engine</li>
+    </ul>
+  );
+}
+
+export {FoodGallery, Testing, TodoList, DoubleCurlies};
