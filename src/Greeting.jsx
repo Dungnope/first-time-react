@@ -15,3 +15,28 @@ export function ListOfElement() {
         </>
     )
 }
+
+function ListItem(props) {
+    return <li>{props.kid}</li>
+}
+
+function List(props){
+    return (
+        <ul> 
+            {props.animals.map((animal) => {
+                return animal.startsWith("L") ? <ListItem key={animal} kid = {animal} /> : null;
+            })}
+        </ul>
+    )
+}
+
+export function MainListApp() {
+    const animals = ["Lion", "Cow", "Snake", "Lizard"];
+
+    return (
+        <div>
+            <h1>Animals: </h1>
+            <List animals = {animals} />
+        </div>
+    )
+}
